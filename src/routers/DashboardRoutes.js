@@ -14,7 +14,10 @@ export const DashboardRoutes = () => {
                 <Route path="marvel" element={<MarvelScreen />} />
                 <Route path="dc" element={<DcScreen />} />
                 <Route path="search" element={<SearchScreen />} />
-                <Route path="hero" element={<Hero />} />
+                {/*the colons on the hero path allow us to use an extra parameter on the link used
+                   to render this component, the parameter can then be retrieved by a method used
+                   later on for additional processes, please check the Hero component for extra information */}
+                <Route path="hero/:heroId" element={<Hero />} />
                 <Route path="/" element={<MarvelScreen />} />
             </Routes>
         </div>
