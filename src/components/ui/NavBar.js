@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/authContext';
+import { types } from '../../types/types';
 
 export const Navbar = () => {
 
     // we use the useNavigate method from the react-router-dom library to assign its content on a 
     // constant which we will later use for a click event
     const navigate = useNavigate();
+    // we call the useContext method which is transferring the user information with all the routers
+    // on the webpage, im destructuring it from the AuthContext component and then i retrieve
+    // its name to render it properly on the navigation bar
+    const {user, dispatch} = useContext(AuthContext);
+    const {name} = user;
 
     const handleLogout = () => {
 
@@ -13,6 +20,13 @@ export const Navbar = () => {
         // the 'replace: true' is used so if the user tries to return to the previous page, he is unable
         // to do so, we do this so once the user is logged out, he cannot come back until he login again,
         // not very specific on this example but conditionally makes sense on a session context
+        const action = {
+            type: types.logout,
+        }
+
+        dispatch(action);
+        
+        
         navigate('/login', {
             replace: true,
         });
@@ -70,7 +84,7 @@ export const Navbar = () => {
                     <span
                         className='nav-item nav-link text-info'
                     >
-                        Miguel
+                        {name}
                     </span>
 
                     <button 
