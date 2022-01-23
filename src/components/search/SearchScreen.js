@@ -20,7 +20,7 @@ export const SearchScreen = () => {
     // we use our custom hook to assign the query string value retrieved with the useLocation and
     // queryString to assign it on the form value, the handleInputChange function is used on the
     // change event to handle any modifications in the input text
-    const [{searchText}, handleInputChange, reset] =  useForm({
+    const [{searchText}, handleInputChange] =  useForm({
         searchText: q
     })
     // the useMemo will allow us to keep information from the return of the getHeroesByName selector,
