@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on SearchScreen component should render alert-danger class when the query does not match any hero 1`] = `
+Array [
+  <h1>
+    Search
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Type hero info
+      </h4>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Insert information here"
+          type="text"
+          value="pokemon"
+        />
+        <button
+          className="btn btn-outline-primary mt-2 col-12"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-danger"
+      >
+        No results for: 
+        pokemon
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Tests on SearchScreen component should render properly with default values 1`] = `
+Array [
+  <h1>
+    Search
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Type hero info
+      </h4>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Insert information here"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn btn-outline-primary mt-2 col-12"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-info"
+      >
+        Search for hero
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Tests on SearchScreen component should render properly with query parameter 1`] = `
+Array [
+  <h1>
+    Search
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Type hero info
+      </h4>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Insert information here"
+          type="text"
+          value="batman"
+        />
+        <button
+          className="btn btn-outline-primary mt-2 col-12"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="col animate__animated animate__fadeIn"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="row no-gutters"
+          >
+            <div
+              className="col-4"
+            >
+              <img
+                alt="superhero"
+                className="card-img"
+                src="/assets/dc-batman.jpg"
+              />
+            </div>
+            <div
+              className="col-8"
+            >
+              <div
+                className="card-body"
+              >
+                <h5
+                  className="card-title"
+                >
+                  Batman
+                </h5>
+                <p
+                  className="card-text"
+                >
+                  Bruce Wayne
+                </p>
+                <p
+                  className="card-text"
+                >
+                  <small
+                    className="text-muted"
+                  >
+                    Detective Comics #27
+                  </small>
+                </p>
+                <a
+                  href="/hero/dc-batman"
+                  onClick={[Function]}
+                >
+                  More...
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
