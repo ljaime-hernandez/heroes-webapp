@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.3c48170c.js",
+    "main.js": "/static/js/main.9411e8bc.js",
     "static/media/dc-wonder.jpg": "/static/media/dc-wonder.970ba2d62a4636ff6afb.jpg",
     "static/media/dc-flash.jpg": "/static/media/dc-flash.b3922f25f3765970d74c.jpg",
     "static/media/dc-martian.jpg": "/static/media/dc-martian.78565f7df6238ef8a601.jpg",
@@ -22,9 +22,9 @@
     "static/media/marvel-hawkeye.jpg": "/static/media/marvel-hawkeye.1f78e874c315b926c463.jpg",
     "static/media/dc-robin.jpg": "/static/media/dc-robin.ea4afe99ecbc5480b0e3.jpg",
     "index.html": "/index.html",
-    "main.3c48170c.js.map": "/static/js/main.3c48170c.js.map"
+    "main.9411e8bc.js.map": "/static/js/main.9411e8bc.js.map"
   },
   "entrypoints": [
-    "static/js/main.3c48170c.js"
+    "static/js/main.9411e8bc.js"
   ]
 }

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import {useParams, Navigate, useNavigate} from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
-import { loadImage } from '../../selectors/getHeroImages';
+import { heroImages } from '../../selectors/getHeroImages';
 
 export const Hero = () => {
 
@@ -67,7 +67,7 @@ export const Hero = () => {
             {/*column 4, will complete the space together with the col-8 div */}
             <div className='col-4'>
                 <img 
-                    src={ loadImage(`${ heroId }.jpg`) }
+                    src={ heroImages(`./${ heroId }.jpg`).default }
                     alt={hero.superhero}
                     className='img-thumbnail animate__animated animate__backInLeft'
                 />
