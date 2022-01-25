@@ -2,6 +2,8 @@ import { useMemo } from 'react';
 import {useParams, Navigate, useNavigate} from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
 
+const heroImages = require.context('../../assets', true);
+
 export const Hero = () => {
 
     // with the useParams method, we can retrieve the parameters which will be concatenated with a 
@@ -33,7 +35,6 @@ export const Hero = () => {
     // soon to be rendered, this step is not highly necessary but will save us time from typing
     // hero.id, hero.superhero, and so on.
     const {
-        id,
         superhero,
         publisher,
         alter_ego,
@@ -41,7 +42,6 @@ export const Hero = () => {
         characters
     } = hero;
     // we declare a string which we will use to retrieve the picture saved in the assets folder
-    const imgPath = `/assets/${id}.jpg`;
 
     const handleReturn = () => {
 
@@ -68,7 +68,7 @@ export const Hero = () => {
             {/*column 4, will complete the space together with the col-8 div */}
             <div className='col-4'>
                 <img 
-                    src={imgPath}
+                    src={heroImages(`./${heroId}.jpg`)}
                     alt={hero.superhero}
                     className='img-thumbnail animate__animated animate__backInLeft'
                 />

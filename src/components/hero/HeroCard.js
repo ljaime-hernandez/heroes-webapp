@@ -1,5 +1,8 @@
 import {Link} from 'react-router-dom';
 
+const heroImages = require.context('../../assets', true);
+
+
     // for clear usage, we destructure all the details of the hero to use them on the html elements
     // soon to be rendered, all this information comes contained from an array element by using the
     // spread operator instead of specifying each value contained on the element
@@ -12,7 +15,6 @@ export const HeroCard = ({
     characters}) => {
 
         // we declare a string which we will use to retrieve the picture saved in the assets folder
-        const imgPath = `/assets/${id}.jpg`;
 
     return (
         <div className="col animate__animated animate__fadeIn">
@@ -21,7 +23,7 @@ export const HeroCard = ({
 
                    <div className="col-4">
                         <img 
-                            src={imgPath}
+                            src={heroImages(`./${id}.jpg`)}
                             className="card-img"
                             alt="superhero"
                         />
