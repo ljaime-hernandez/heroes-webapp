@@ -74,6 +74,7 @@ describe('tests on PrivateRoute', () => {
                 </MemoryRouter> 
             </AuthContext.Provider>
         );
+        expect(wrapper.text().trim()).toBe('Private Component');
 
         // we use the useLocation hook in the PrivateRoute to save the actual
         // user path while its navigating in the webpage, the path should be the
