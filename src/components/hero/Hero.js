@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import {useParams, Navigate, useNavigate} from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
+import { loadImage } from '../../selectors/getHeroImages';
 
-const heroImages = require.context('../../assets', true);
 
 export const Hero = () => {
 
@@ -68,7 +68,7 @@ export const Hero = () => {
             {/*column 4, will complete the space together with the col-8 div */}
             <div className='col-4'>
                 <img 
-                    src={heroImages(`./${heroId}.jpg`)}
+                    src={ loadImage(`${ heroId }.jpg`) }
                     alt={hero.superhero}
                     className='img-thumbnail animate__animated animate__backInLeft'
                 />

@@ -1,7 +1,5 @@
 import {Link} from 'react-router-dom';
-
-const heroImages = require.context('../../assets', true);
-
+import { loadImage } from '../../selectors/getHeroImages';
 
     // for clear usage, we destructure all the details of the hero to use them on the html elements
     // soon to be rendered, all this information comes contained from an array element by using the
@@ -23,7 +21,7 @@ export const HeroCard = ({
 
                    <div className="col-4">
                         <img 
-                            src={heroImages(`./${id}.jpg`)}
+                            src={ loadImage(`${ id }.jpg`) }
                             className="card-img"
                             alt="superhero"
                         />
