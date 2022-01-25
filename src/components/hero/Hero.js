@@ -3,7 +3,6 @@ import {useParams, Navigate, useNavigate} from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
 import { loadImage } from '../../selectors/getHeroImages';
 
-
 export const Hero = () => {
 
     // with the useParams method, we can retrieve the parameters which will be concatenated with a 
