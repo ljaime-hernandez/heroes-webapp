@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
-import { loadImage } from '../../selectors/getHeroImages';
+import { heroImages } from '../../selectors/getHeroImages';
+
 
     // for clear usage, we destructure all the details of the hero to use them on the html elements
     // soon to be rendered, all this information comes contained from an array element by using the
@@ -21,7 +22,7 @@ export const HeroCard = ({
 
                    <div className="col-4">
                         <img 
-                            src={ loadImage(`${ id }.jpg`) }
+                            src={ heroImages(`./${ id }.jpg`).default }
                             className="card-img"
                             alt="superhero"
                         />
